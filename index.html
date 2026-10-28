@@ -7,20 +7,20 @@
 <meta name="description" content="Shreyas Kadu: engineer with 2+ years across consultancy, industrial R&amp;D and research. CFD, hydrogen storage, thermal systems and techno-economic analysis.">
 <style>
   :root {
-    --slate: #26313b;
-    --deep: #1d3b58;
-    --forest: #2f6b5a;
-    --mist: #eef2f4;
-    --gray: #858a91;
-    --line: #d5dce1;
-    --ink: #1f2a33;
+    --slate: #0a1116;
+    --deep: #8fc3e6;
+    --forest: #6fbf9f;
+    --mist: #17232d;
+    --gray: #8a9aa6;
+    --line: #2a3a46;
+    --ink: #e6edf2;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: "Segoe UI", Arial, Helvetica, sans-serif; color: var(--ink); background: #fff; line-height: 1.6; font-size: 16px; }
+  body { margin: 0; font-family: "Segoe UI", Arial, Helvetica, sans-serif; color: var(--ink); background: #0f171e; line-height: 1.6; font-size: 16px; }
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
   /* Hero: field-site banner */
-  .hero { background: linear-gradient(135deg, var(--slate) 0%, var(--deep) 60%, var(--forest) 130%); color: #fff; padding: 64px 0 52px; }
+  .hero { background: linear-gradient(135deg, #0a1116 0%, #1d3b58 65%, #24513f 130%); color: #fff; padding: 64px 0 52px; }
   .hero-inner { display: grid; grid-template-columns: 1fr 260px; gap: 40px; align-items: center; }
   .tag { display: inline-block; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; background: rgba(255,255,255,0.12); padding: 4px 10px; border-radius: 2px; margin-bottom: 14px; }
   .hero h1 { margin: 0 0 8px; font-size: 2.6rem; font-weight: 700; letter-spacing: 0.5px; }
@@ -38,36 +38,37 @@
   .metric strong { display: block; font-size: 1.6rem; color: var(--deep); line-height: 1.1; }
   .metric span { font-size: 0.82rem; color: #555; }
 
-  nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--line); z-index: 2; }
+  nav { position: sticky; top: 0; background: #0f171e; border-bottom: 1px solid var(--line); z-index: 2; }
   nav ul { list-style: none; margin: 0; padding: 12px 0; display: flex; flex-wrap: wrap; gap: 6px 22px; justify-content: center; font-size: 0.92rem; }
-  nav a { color: var(--slate); text-decoration: none; }
+  nav a { color: #cfd9e0; text-decoration: none; }
   nav a:hover { color: var(--forest); }
 
   section { padding: 56px 0 8px; }
   h2 { font-size: 1.5rem; margin: 0 0 22px; color: var(--deep); }
   h2 small { display: block; font-size: 0.9rem; font-weight: normal; color: var(--gray); margin-top: 4px; }
-  h3 { font-size: 1.12rem; margin: 0; color: var(--slate); }
+  h3 { font-size: 1.12rem; margin: 0; color: #e6edf2; }
   .meta { color: var(--gray); font-size: 0.92rem; margin: 2px 0 10px; }
-  p { margin: 0 0 12px; }
+  p { margin: 0 0 12px; text-align: justify; }
+  li { text-align: justify; }
   ul { margin: 8px 0 0 20px; padding: 0; }
   li { margin-bottom: 6px; }
 
   /* Case studies */
   .cases { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .case { border: 1px solid var(--line); border-top: 4px solid var(--forest); border-radius: 4px; padding: 22px 22px 18px; background: #fff; }
+  .case { border: 1px solid var(--line); border-top: 4px solid var(--forest); border-radius: 4px; padding: 22px 22px 18px; background: #0f171e; }
   .case.full { grid-column: 1 / -1; }
-  .case .loc { display: inline-block; font-size: 0.78rem; color: var(--deep); background: #e1ebf1; padding: 2px 8px; border-radius: 2px; margin-bottom: 10px; letter-spacing: 0.5px; }
-  .case h4 { margin: 0 0 4px; font-size: 1.02rem; color: var(--slate); }
+  .case .loc { display: inline-block; font-size: 0.78rem; color: #cfe6f5; background: #1d3142; padding: 2px 8px; border-radius: 2px; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .case h4 { margin: 0 0 4px; font-size: 1.02rem; color: #e6edf2; }
   .case .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--forest); margin: 14px 0 4px; font-weight: bold; }
-  .result { background: var(--mist); border-left: 3px solid var(--forest); padding: 10px 12px; margin-top: 14px; font-size: 0.95rem; }
-  .result strong { color: var(--deep); }
+  .result { background: #1d2c38; border-left: 3px solid var(--forest); padding: 10px 12px; margin-top: 14px; font-size: 0.95rem; }
+  .result strong { color: #8fc3e6; }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-  .chips span { font-size: 0.78rem; background: #fff; border: 1px solid var(--line); padding: 2px 8px; border-radius: 2px; color: var(--slate); }
+  .chips span { font-size: 0.78rem; background: #0f171e; border: 1px solid var(--line); padding: 2px 8px; border-radius: 2px; color: #cfd9e0; }
 
   /* Experience timeline */
   .timeline { border-left: 2px solid var(--line); margin-left: 6px; padding-left: 24px; }
   .job { position: relative; margin-bottom: 26px; }
-  .job::before { content: ""; position: absolute; left: -31px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--forest); border: 2px solid #fff; }
+  .job::before { content: ""; position: absolute; left: -31px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--forest); border: 2px solid #0f171e; }
 
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
   .box { background: var(--mist); border-radius: 4px; padding: 20px 22px; }
@@ -75,12 +76,14 @@
 
   .list-plain li { margin-bottom: 8px; }
   .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chip-row span { background: var(--mist); color: var(--deep); padding: 4px 11px; border-radius: 2px; font-size: 0.88rem; border: 1px solid var(--line); }
+  .chip-row span { background: var(--mist); color: #cfe6f5; padding: 4px 11px; border-radius: 2px; font-size: 0.88rem; border: 1px solid var(--line); }
 
   .pub { background: var(--mist); border-left: 4px solid var(--deep); padding: 18px 20px; border-radius: 2px; }
   a { color: var(--deep); }
 
-  footer { margin-top: 56px; background: var(--slate); color: #cdd7de; padding: 28px 0; font-size: 0.92rem; }
+  .case p, .case li, .result, .box p, .pub p, .box, .split p { text-align: justify; }
+  .job li, .job p { text-align: justify; }
+  footer { margin-top: 56px; background: #0a1116; color: #9fb0bc; padding: 28px 0; font-size: 0.92rem; }
   footer a { color: #fff; }
 
   @media (max-width: 860px) {
@@ -89,16 +92,72 @@
     .metric { border-right: none; }
     .cases, .split { grid-template-columns: 1fr; }
   }
+
+  /* ---------- Animations ---------- */
+  /* Custom cursor: a precise dot plus a trailing ring (desktop with a fine pointer only) */
+  .cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; opacity: 0; transition: opacity 0.3s ease; }
+  .cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: var(--forest); }
+  .cursor-ring { width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1px solid var(--deep); transition: opacity 0.3s ease, width 0.25s ease, height 0.25s ease, margin 0.25s ease, background 0.25s ease; }
+  .cursor-ring.hover { width: 52px; height: 52px; margin: -26px 0 0 -26px; background: rgba(47,107,90,0.12); border-color: var(--forest); }
+  body.cursor-on .cursor-dot, body.cursor-on .cursor-ring { opacity: 1; }
+  body.cursor-on, body.cursor-on a, body.cursor-on button { cursor: none; }
+
+  /* Scroll reveals: fade and rise into place, staggered per group */
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; transition-delay: var(--d, 0ms); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Hero line-art: a thermal-flow path that draws itself on load */
+  .hero { position: relative; overflow: hidden; }
+  .hero-art { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.35; }
+  .hero-art path { fill: none; stroke: #cfe0ea; stroke-width: 1.2; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: draw 3.2s ease forwards; }
+  .hero-art path.b { animation-delay: 0.8s; stroke-width: 0.8; opacity: 0.6; }
+  .hero-art circle { fill: none; stroke: #cfe0ea; stroke-width: 1; opacity: 0; animation: fadein 0.6s ease 2.4s forwards; }
+  .hero-inner { position: relative; z-index: 1; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes fadein { to { opacity: 1; } }
+
+  /* Micro-interactions */
+  nav a, .hero .links a { position: relative; transition: color 0.2s ease; }
+  nav a::after, .hero .links a::after { content: ""; position: absolute; left: 0; bottom: -3px; width: 0; height: 1px; background: currentColor; transition: width 0.25s ease; }
+  nav a:hover::after, .hero .links a:hover::after { width: 100%; }
+  .case, .box, .job { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+  .case:hover, .box:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(29,59,88,0.10); }
+  .case:hover { border-top-color: var(--deep); }
+  .chips span, .chip-row span { transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+  .chips span:hover, .chip-row span:hover { background: var(--deep); color: #fff; border-color: var(--deep); }
+  .metric { transition: background 0.25s ease; }
+  .metric:hover { background: #0f171e; }
+  .metric strong { transition: color 0.25s ease; }
+  .metric:hover strong { color: var(--forest); }
+  .job:hover::before { transform: scale(1.25); }
+  .job::before { transition: transform 0.25s ease; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+
+  @media (hover: none), (pointer: coarse) { .cursor-dot, .cursor-ring { display: none; } }
+  @media (max-width: 600px) { .reveal { opacity: 1; transform: none; transition: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    .hero-art path { stroke-dashoffset: 0; }
+    .hero-art circle { opacity: 1; }
+  }
 </style>
 </head>
 <body>
 
 <header class="hero">
+  <svg class="hero-art" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-20 300 C 150 260, 220 120, 420 150 S 700 330, 900 210 S 1120 60, 1220 110" />
+    <path class="b" d="M-20 360 C 180 330, 300 250, 500 270 S 800 390, 1000 300 S 1150 230, 1220 250" />
+    <path class="b" d="M60 60 L 260 60 L 300 100 L 560 100" />
+    <circle cx="560" cy="100" r="5" />
+    <circle cx="1010" cy="300" r="5" />
+  </svg>
   <div class="wrap hero-inner">
     <div>
       <span class="tag">Birmingham, UK</span>
       <h1>Shreyas Kadu</h1>
-      <div class="role">Simulation and energy systems engineer: CFD, hydrogen storage, thermal systems and techno-economic analysis</div>
+      <div class="role">Energy systems engineer: CFD, hydrogen storage, thermal systems and techno-economic analysis</div>
       <div class="links">
         <a href="mailto:shreyas.kadu.pj@gmail.com">shreyas.kadu.pj@gmail.com</a>
         <a href="https://www.linkedin.com/in/shreyas-kadu-67aa491a8/" target="_blank" rel="noopener">LinkedIn</a>
@@ -109,20 +168,10 @@
   </div>
 </header>
 
-<div class="metrics">
-  <div class="wrap metrics-inner">
-    <div class="metric"><strong>2+</strong><span>years across consultancy, R&amp;D and research</span></div>
-    <div class="metric"><strong>15%</strong><span>thermal efficiency gain (CFD)</span></div>
-    <div class="metric"><strong>6.5M</strong><span>element hydrogen tank model</span></div>
-    <div class="metric"><strong>20%</strong><span>energy consumption reduction</span></div>
-    <div class="metric"><strong>1</strong><span>peer-reviewed book chapter</span></div>
-  </div>
-</div>
-
 <nav>
   <ul>
     <li><a href="#summary">Summary</a></li>
-    <li><a href="#projects">Case studies</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#leadership">Leadership</a></li>
     <li><a href="#awards">Awards</a></li>
@@ -136,12 +185,12 @@
 
 <section id="summary">
   <h2>Summary</h2>
-  <p>Engineer with 2+ years of experience across engineering consultancy, industrial R&amp;D and research, specialising in CFD, parametric modelling and techno-economic analysis for hydrogen storage and thermal systems. I turn detailed simulation results into clear recommendations for engineers, clients and decision-makers.</p>
+  <p>Energy systems engineer specialising in CFD and techno-economic analysis of hydrogen storage and thermal systems, with 2+ years across engineering consultancy, industrial R&amp;D and research. I turn detailed simulation results into clear recommendations for engineers, clients and decision-makers.</p>
   <p>Recent results include a 4% engine efficiency gain from a thermoelectric hackathon project, and first place at the VIT Chem-E-Car Performance Competition in 2022.</p>
 </section>
 
 <section id="projects">
-  <h2>Case studies <small>Selected projects, with the basis, approach and results</small></h2>
+  <h2>Engineering projects <small>Modelling, simulation and design work, with the basis, approach and results</small></h2>
   <div class="cases">
 
     <article class="case full">
@@ -194,6 +243,20 @@
       <div class="result"><strong>Result:</strong> first place at the VIT Chem-E-Car Performance Competition (2022), and a 20% reduction in energy consumption.</div>
     </article>
 
+
+    <article class="case full">
+      <span class="loc">Self-directed project &middot; 2026</span>
+      <h4>ARIA: Energy Consulting Suite</h4>
+      <div class="label">Design basis</div>
+      <p>A web tool that gives small and medium-sized businesses a structured view of their energy use, carbon footprint and on-site generation options.</p>
+      <div class="label">Approach</div>
+      <ul>
+        <li>Built a Python Flask application with separate assessment pages for SME energy, net zero roadmaps, solar PV and battery storage, and carbon footprint.</li>
+        <li>Calculated carbon emissions from gas and electricity use with DESNZ 2025 conversion factors, and sized solar PV from roof area with indicative installed cost ranges.</li>
+        <li>Added an AI-assisted report layer, using the Anthropic API, that turns the inputs into written assessments across six report types.</li>
+      </ul>
+      <div class="chips"><span>Python</span><span>Flask</span><span>Anthropic API</span><span>HTML, CSS and JavaScript</span><span>DESNZ 2025 factors</span></div>
+    </article>
   </div>
 </section>
 
@@ -237,7 +300,6 @@
       <div class="meta">Jul – Dec 2023</div>
       <ul>
         <li>Developed new energetic polymers using molecular dynamics simulation in Materials Studio and COMSOL.</li>
-        <li>Achieved a 7% increase in energy output compared with previous materials.</li>
       </ul>
     </div>
 
@@ -257,14 +319,6 @@
       <div class="meta">MIT-World Peace University &middot; Dec 2023 – June 2024</div>
       <p>Set up a mentorship programme in fuel cell technology, and mentored a third-year team competing at SRC'24 Southeast Asia.</p>
       <p><strong>Result:</strong> 40% increase in members' understanding, proficiency and participation. The mentored team placed second overall and qualified for the annual competition in San Diego.</p>
-    </div>
-    <div class="box">
-      <h3>Organising Team Member, Syntropy</h3>
-      <div class="meta">MIT-World Peace University &middot; Mar – Apr 2023</div>
-    </div>
-    <div class="box">
-      <h3>Event Coordinator, Paper Presentation</h3>
-      <div class="meta">MIT-World Peace University &middot; Apr – May 2022</div>
     </div>
     <div class="box">
       <h3>European Immersion Programme</h3>
@@ -298,7 +352,7 @@
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="split">
+  <div class="split skills-block">
     <div>
       <h3>Simulation and modelling</h3>
       <div class="chip-row" style="margin-top:10px">
@@ -315,7 +369,7 @@
       <h3 style="margin-top:20px">Soft skills</h3>
       <p style="margin-top:10px">Technical communication, translating for non-specialists, critical thinking and scepticism, attention to detail, stakeholder management, problem-solving under constraints, curiosity and continuous learning.</p>
       <h3 style="margin-top:20px">Languages</h3>
-      <p style="margin-top:10px">English (advanced, IELTS 7), Hindi (native), German (A2, ongoing).</p>
+      <p style="margin-top:10px">English (advanced, IELTS 7), Hindi (native).</p>
     </div>
   </div>
 </section>
@@ -345,6 +399,63 @@
     Shreyas Kadu &middot; <a href="mailto:shreyas.kadu.pj@gmail.com">shreyas.kadu.pj@gmail.com</a> &middot; <a href="https://www.linkedin.com/in/shreyas-kadu-67aa491a8/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </footer>
+
+
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveals
+  var groups = document.querySelectorAll('.metric, section > h2, .case, .job, .box, .pub, .skills-block');
+  groups.forEach(function (el, i) {
+    el.classList.add('reveal');
+    el.style.setProperty('--d', ((i % 4) * 60) + 'ms');
+  });
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    groups.forEach(function (el) { io.observe(el); });
+  } else {
+    groups.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Custom cursor (fine pointer only)
+  if (!reduce && window.matchMedia('(pointer: fine)').matches) {
+    var dot = document.querySelector('.cursor-dot');
+    var ring = document.querySelector('.cursor-ring');
+    var mx = window.innerWidth / 2, my = window.innerHeight / 2, rx = mx, ry = my;
+    document.body.classList.add('cursor-on');
+    window.addEventListener('mousemove', function (e) {
+      mx = e.clientX; my = e.clientY;
+      dot.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
+      kick();
+    }, { passive: true });
+    var running = false;
+    function loop() {
+      rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
+      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px)';
+      if (Math.abs(mx - rx) > 0.1 || Math.abs(my - ry) > 0.1) {
+        requestAnimationFrame(loop);
+      } else {
+        running = false; // settled: stop the frame loop until the mouse moves again
+      }
+    }
+    function kick() { if (!running) { running = true; requestAnimationFrame(loop); } }
+    var sel = 'a, button, .case, .box, .metric, .chips span, .chip-row span';
+    document.addEventListener('mouseover', function (e) {
+      if (e.target.closest && e.target.closest(sel)) ring.classList.add('hover');
+    });
+    document.addEventListener('mouseout', function (e) {
+      if (e.target.closest && e.target.closest(sel)) ring.classList.remove('hover');
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
