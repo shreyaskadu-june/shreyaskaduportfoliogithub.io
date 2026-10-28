@@ -4,202 +4,346 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shreyas Kadu | Simulation and Energy Systems Engineer</title>
-<meta name="description" content="Portfolio of Shreyas Kadu: CFD, cryogenic hydrogen storage, thermal systems and techno-economic analysis.">
+<meta name="description" content="Shreyas Kadu: engineer with 2+ years across consultancy, industrial R&amp;D and research. CFD, hydrogen storage, thermal systems and techno-economic analysis.">
 <style>
-  :root { --blue: #1f6fd1; --ink: #222; --muted: #555; --line: #ddd; --bg: #fafbfd; }
+  :root {
+    --slate: #26313b;
+    --deep: #1d3b58;
+    --forest: #2f6b5a;
+    --mist: #eef2f4;
+    --gray: #858a91;
+    --line: #d5dce1;
+    --ink: #1f2a33;
+  }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: #fff; line-height: 1.6; }
-  header { background: var(--bg); border-bottom: 1px solid var(--line); padding: 48px 24px; }
-  .wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
-  header h1 { margin: 0; font-size: 2.6rem; letter-spacing: 1px; }
-  header .role { color: var(--blue); font-weight: 700; font-size: 1.15rem; margin: 6px 0 12px; }
-  header .contact a { color: var(--ink); margin-right: 16px; text-decoration: none; border-bottom: 1px dotted var(--muted); }
-  nav { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 1; }
-  nav ul { list-style: none; margin: 0; padding: 12px 0; display: flex; flex-wrap: wrap; gap: 18px; }
-  nav a { color: var(--ink); text-decoration: none; font-size: 0.95rem; }
-  nav a:hover { color: var(--blue); }
-  section { padding: 36px 0; border-bottom: 1px solid var(--line); }
-  section:last-of-type { border-bottom: none; }
-  h2 { font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 20px; color: var(--ink); }
-  h3 { font-size: 1.05rem; margin: 22px 0 0; }
-  .org { color: var(--blue); font-weight: 600; margin: 2px 0 0; }
-  .meta { color: var(--muted); font-size: 0.92rem; margin: 2px 0 8px; }
-  ul.points { margin: 6px 0 0 20px; padding: 0; }
-  ul.points li { margin-bottom: 6px; }
-  .card { border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; margin-bottom: 16px; }
-  .card h3 { margin-top: 0; }
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-  .tags span { background: #eaf2fc; color: var(--blue); font-size: 0.82rem; padding: 3px 10px; border-radius: 12px; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 680px) { .grid { grid-template-columns: 1fr; } header h1 { font-size: 2rem; } }
-  footer { background: var(--bg); border-top: 1px solid var(--line); padding: 20px 0; color: var(--muted); font-size: 0.9rem; text-align: center; }
+  body { margin: 0; font-family: "Segoe UI", Arial, Helvetica, sans-serif; color: var(--ink); background: #fff; line-height: 1.6; font-size: 16px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero: field-site banner */
+  .hero { background: linear-gradient(135deg, var(--slate) 0%, var(--deep) 60%, var(--forest) 130%); color: #fff; padding: 64px 0 52px; }
+  .hero-inner { display: grid; grid-template-columns: 1fr 260px; gap: 40px; align-items: center; }
+  .tag { display: inline-block; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; background: rgba(255,255,255,0.12); padding: 4px 10px; border-radius: 2px; margin-bottom: 14px; }
+  .hero h1 { margin: 0 0 8px; font-size: 2.6rem; font-weight: 700; letter-spacing: 0.5px; }
+  .hero .role { font-size: 1.1rem; color: #cfe0ea; margin-bottom: 18px; }
+  .hero .links a { color: #fff; margin-right: 18px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.5); }
+  .hero .links a:hover { border-bottom-color: #fff; }
+  .hero .photo { width: 100%; max-width: 260px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+
+  /* Metrics strip */
+  .metrics { background: var(--mist); border-bottom: 1px solid var(--line); }
+  .metrics-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; }
+  .metric { padding: 22px 14px; text-align: center; border-right: 1px solid var(--line); }
+  .metric:last-child { border-right: none; }
+  .metric { border-bottom: 1px solid var(--line); }
+  .metric strong { display: block; font-size: 1.6rem; color: var(--deep); line-height: 1.1; }
+  .metric span { font-size: 0.82rem; color: #555; }
+
+  nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--line); z-index: 2; }
+  nav ul { list-style: none; margin: 0; padding: 12px 0; display: flex; flex-wrap: wrap; gap: 6px 22px; justify-content: center; font-size: 0.92rem; }
+  nav a { color: var(--slate); text-decoration: none; }
+  nav a:hover { color: var(--forest); }
+
+  section { padding: 56px 0 8px; }
+  h2 { font-size: 1.5rem; margin: 0 0 22px; color: var(--deep); }
+  h2 small { display: block; font-size: 0.9rem; font-weight: normal; color: var(--gray); margin-top: 4px; }
+  h3 { font-size: 1.12rem; margin: 0; color: var(--slate); }
+  .meta { color: var(--gray); font-size: 0.92rem; margin: 2px 0 10px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 8px 0 0 20px; padding: 0; }
+  li { margin-bottom: 6px; }
+
+  /* Case studies */
+  .cases { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .case { border: 1px solid var(--line); border-top: 4px solid var(--forest); border-radius: 4px; padding: 22px 22px 18px; background: #fff; }
+  .case.full { grid-column: 1 / -1; }
+  .case .loc { display: inline-block; font-size: 0.78rem; color: var(--deep); background: #e1ebf1; padding: 2px 8px; border-radius: 2px; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .case h4 { margin: 0 0 4px; font-size: 1.02rem; color: var(--slate); }
+  .case .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--forest); margin: 14px 0 4px; font-weight: bold; }
+  .result { background: var(--mist); border-left: 3px solid var(--forest); padding: 10px 12px; margin-top: 14px; font-size: 0.95rem; }
+  .result strong { color: var(--deep); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .chips span { font-size: 0.78rem; background: #fff; border: 1px solid var(--line); padding: 2px 8px; border-radius: 2px; color: var(--slate); }
+
+  /* Experience timeline */
+  .timeline { border-left: 2px solid var(--line); margin-left: 6px; padding-left: 24px; }
+  .job { position: relative; margin-bottom: 26px; }
+  .job::before { content: ""; position: absolute; left: -31px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--forest); border: 2px solid #fff; }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .box { background: var(--mist); border-radius: 4px; padding: 20px 22px; }
+  .box h3 { margin-bottom: 8px; }
+
+  .list-plain li { margin-bottom: 8px; }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip-row span { background: var(--mist); color: var(--deep); padding: 4px 11px; border-radius: 2px; font-size: 0.88rem; border: 1px solid var(--line); }
+
+  .pub { background: var(--mist); border-left: 4px solid var(--deep); padding: 18px 20px; border-radius: 2px; }
+  a { color: var(--deep); }
+
+  footer { margin-top: 56px; background: var(--slate); color: #cdd7de; padding: 28px 0; font-size: 0.92rem; }
+  footer a { color: #fff; }
+
+  @media (max-width: 860px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; }
+    .hero .photo { margin: 0 auto; }
+    .metric { border-right: none; }
+    .cases, .split { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <h1>SHREYAS KADU</h1>
-    <div class="role">Simulation and Energy Systems Engineer | CFD | Renewable Energy Analysis</div>
-    <div class="contact">
-      <a href="mailto:shreyas.kadu.pj@gmail.com">shreyas.kadu.pj@gmail.com</a>
-      <span>Birmingham, UK</span>
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="tag">Birmingham, UK</span>
+      <h1>Shreyas Kadu</h1>
+      <div class="role">Simulation and energy systems engineer: CFD, hydrogen storage, thermal systems and techno-economic analysis</div>
+      <div class="links">
+        <a href="mailto:shreyas.kadu.pj@gmail.com">shreyas.kadu.pj@gmail.com</a>
+        <a href="https://www.linkedin.com/in/shreyas-kadu-67aa491a8/" target="_blank" rel="noopener">LinkedIn</a>
+        <span>+44 7568749568</span>
+      </div>
     </div>
+    <img class="photo" src="profile.jpg" alt="Shreyas Kadu">
   </div>
 </header>
 
-<nav>
-  <div class="wrap">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#leadership">Leadership</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-    </ul>
+<div class="metrics">
+  <div class="wrap metrics-inner">
+    <div class="metric"><strong>2+</strong><span>years across consultancy, R&amp;D and research</span></div>
+    <div class="metric"><strong>15%</strong><span>thermal efficiency gain (CFD)</span></div>
+    <div class="metric"><strong>6.5M</strong><span>element hydrogen tank model</span></div>
+    <div class="metric"><strong>20%</strong><span>energy consumption reduction</span></div>
+    <div class="metric"><strong>1</strong><span>peer-reviewed book chapter</span></div>
   </div>
+</div>
+
+<nav>
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#projects">Case studies</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
 </nav>
 
 <main class="wrap">
 
-<section id="about">
-  <h2>About</h2>
-  <p>I am an energy systems and simulation engineer with an MSc in Global Energy Technologies and Systems from the University of Birmingham (result pending, expected merit) and a B.Tech in Chemical Engineering (CGPA 9.26/10). My work combines CFD, parametric modelling and techno-economic analysis to support decisions on hydrogen storage and thermal systems.</p>
-  <p>I am most interested in turning detailed simulation results into clear recommendations for engineers, clients and decision-makers.</p>
+<section id="summary">
+  <h2>Summary</h2>
+  <p>Engineer with 2+ years of experience across engineering consultancy, industrial R&amp;D and research, specialising in CFD, parametric modelling and techno-economic analysis for hydrogen storage and thermal systems. I turn detailed simulation results into clear recommendations for engineers, clients and decision-makers.</p>
+  <p>Recent results include a 4% engine efficiency gain from a thermoelectric hackathon project, and first place at the VIT Chem-E-Car Performance Competition in 2022.</p>
+</section>
+
+<section id="projects">
+  <h2>Case studies <small>Selected projects, with the basis, approach and results</small></h2>
+  <div class="cases">
+
+    <article class="case full">
+      <span class="loc">University of Birmingham, UK &middot; Feb 2026 – present</span>
+      <h4>Cryogenic hydrogen storage: MSc research</h4>
+      <div class="label">Design basis</div>
+      <p>A maritime-scale liquid hydrogen tank, studied for self-pressurisation and boil-off at different fill levels.</p>
+      <div class="label">Approach</div>
+      <ul>
+        <li>Built a 3D parametric CFD model of about 6.5 million elements.</li>
+        <li>Ran the parametric studies on HPC with SLURM and Python.</li>
+        <li>Quantified discretisation and numerical uncertainty across the runs.</li>
+      </ul>
+      <div class="result"><strong>Result:</strong> a multiphase model showing how fill level drives pressurisation and boil-off.</div>
+      <div class="chips"><span>ANSYS Fluent</span><span>HPC / SLURM</span><span>Python</span><span>MATLAB</span></div>
+    </article>
+
+    <article class="case">
+      <span class="loc">MIT-World Peace University, Pune, India &middot; Feb – May 2024</span>
+      <h4>Shell-and-tube heat exchanger CFD study</h4>
+      <div class="label">Approach</div>
+      <p>Final-year project: CFD analysis of shell-and-tube heat exchangers with and without baffles, comparing design variants on performance, cost and manufacturability.</p>
+      <div class="result"><strong>Result:</strong> 15% thermal efficiency gain.</div>
+      <div class="chips"><span>CFD</span><span>Heat transfer</span></div>
+    </article>
+
+    <article class="case">
+      <span class="loc">Hack-MITWPU Hackathon, Pune, India &middot; Jan – Feb 2023</span>
+      <h4>Waste heat recovery with thermoelectric generators</h4>
+      <div class="label">Approach</div>
+      <p>Team head. Designed, validated and optimised a waste heat recovery system using TEGs on a combustion engine.</p>
+      <div class="result"><strong>Result:</strong> 4% increase in combustion engine efficiency, with reduced fuel consumption. Second place.</div>
+      <div class="chips"><span>Thermoelectrics</span><span>Energy efficiency</span></div>
+    </article>
+
+    <article class="case">
+      <span class="loc">MIT-World Peace University, Pune, India &middot; Feb 2022 – May 2023</span>
+      <h4>Green synthesis of copper nanoparticles</h4>
+      <div class="label">Approach</div>
+      <p>A green synthesis method for copper nanoparticles that produces less waste than traditional methods, used to degrade organic dye. Supervised by Dr. Pratiksha Khurpade.</p>
+      <div class="result"><strong>Result:</strong> presented to over 500 industry professionals and researchers at ICWT, and published in Springer.</div>
+      <div class="chips"><span>Materials</span><span>Water remediation</span></div>
+    </article>
+
+    <article class="case">
+      <span class="loc">AIChE Student Chapter, MIT-WPU &middot; Mar 2022 – Apr 2023</span>
+      <h4>Team Lead, Chem-E-Car</h4>
+      <div class="label">Approach</div>
+      <p>Led a 16-person multidisciplinary team through the design and build of a chemical car, including battery optimisation.</p>
+      <div class="result"><strong>Result:</strong> first place at the VIT Chem-E-Car Performance Competition (2022), and a 20% reduction in energy consumption.</div>
+    </article>
+
+  </div>
 </section>
 
 <section id="experience">
   <h2>Experience</h2>
+  <div class="timeline">
 
-  <h3>Research Assistant, Thermal Systems and Feasibility Analysis</h3>
-  <div class="org">University of Birmingham (NAVHYS project)</div>
-  <div class="meta">Sept 2026 – Present | Birmingham, UK</div>
-  <ul class="points">
-    <li>Build and analyse parametric energy models of cryogenic hydrogen storage, evaluating performance and losses across operating scenarios.</li>
-    <li>Review modelling assumptions and results before they inform project recommendations.</li>
-    <li>Carry out techno-economic analysis for the EU-funded NAVHYS project.</li>
-  </ul>
+    <div class="job">
+      <h3>Research Assistant, NAVHYS Project</h3>
+      <div class="meta">University of Birmingham &middot; Sept 2026 – present &middot; Birmingham, UK</div>
+      <ul>
+        <li>Build parametric CFD models of cryogenic hydrogen storage and evaluate performance and losses across operating scenarios.</li>
+        <li>Review modelling assumptions and results before they go into project recommendations.</li>
+        <li>Carry out techno-economic analysis for the EU-funded NAVHYS project.</li>
+      </ul>
+    </div>
 
-  <h3>Co-Founder and Technical Advisor</h3>
-  <div class="org">Axentra Precision Systems</div>
-  <div class="meta">Engineering consultancy for pharmaceutical and food-grade manufacturing clients</div>
-  <ul class="points">
-    <li>Carried out technical feasibility and trade-off assessments to support go/no-go decisions.</li>
-    <li>Reviewed client requirements and documented assumptions from definition through handover.</li>
-    <li>Presented findings to client leadership.</li>
-  </ul>
+    <div class="job">
+      <h3>Co-Founder and Technical Advisor</h3>
+      <div class="meta">Axentra Precision Systems &middot; Aug 2024 – Sept 2025</div>
+      <p>Engineering consultancy for pharmaceutical and food-grade manufacturing clients.</p>
+      <ul>
+        <li>Ran technical feasibility and trade-off assessments that supported go/no-go decisions.</li>
+        <li>Reviewed client requirements and documented assumptions from definition through handover.</li>
+        <li>Presented findings to client leadership.</li>
+      </ul>
+    </div>
 
-  <h3>Research Trainee</h3>
-  <div class="org">Leading Edge Industrial Corporation</div>
-  <div class="meta">Manufacturer of speciality coatings</div>
-  <ul class="points">
-    <li>Worked in the R&amp;D division to develop a new anti-static floor coating for the electronics industry.</li>
-    <li>Measured surface resistivity of 10⁵ to 10¹² Ω/sq.</li>
-  </ul>
-</section>
+    <div class="job">
+      <h3>Research Trainee</h3>
+      <div class="meta">Leading Edge Industrial Corporation &middot; Jul 2024 – Aug 2025 &middot; Speciality coatings</div>
+      <ul>
+        <li>Supported R&amp;D of epoxy coatings through material characterisation and testing.</li>
+        <li>Communicated technical findings to project stakeholders and contributed recommendations to R&amp;D decisions.</li>
+        <li>Measured surface resistivity from 10⁵ to 10¹² Ω/sq.</li>
+      </ul>
+    </div>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>MSc Research: Cryogenic Hydrogen Storage</h3>
-      <div class="meta">University of Birmingham | Feb 2026 – Present</div>
-      <ul class="points">
-        <li>Built a parametric model of a maritime-scale liquid hydrogen storage system (about 6.5M elements).</li>
-        <li>Analysed boil-off and energy losses across fill levels and operating conditions.</li>
-        <li>Ran parametric studies on HPC using SLURM and Python; quantified uncertainty in results.</li>
+    <div class="job">
+      <h3>Research Intern, High Energy Materials Research Laboratory (DRDO)</h3>
+      <div class="meta">Jul – Dec 2023</div>
+      <ul>
+        <li>Developed new energetic polymers using molecular dynamics simulation in Materials Studio and COMSOL.</li>
+        <li>Achieved a 7% increase in energy output compared with previous materials.</li>
       </ul>
-      <div class="tags"><span>ANSYS Fluent</span><span>HPC / SLURM</span><span>Python</span></div>
     </div>
-    <div class="card">
-      <h3>CFD Analysis of Shell-and-Tube Heat Exchangers</h3>
-      <div class="meta">MIT-World Peace University | Feb – May 2024</div>
-      <ul class="points">
-        <li>Compared design variants and delivered a 15% thermal efficiency gain, weighing performance, cost and manufacturability.</li>
-      </ul>
-      <div class="tags"><span>CFD</span><span>Heat transfer</span></div>
-    </div>
-    <div class="card">
-      <h3>Waste Heat Recovery with Thermoelectric Generators</h3>
-      <div class="meta">Hack-MITWPU Hackathon | Jan – Feb 2023</div>
-      <ul class="points">
-        <li>Developed and executed a project plan to design, validate and optimise a waste heat recovery system using TEGs for a combustion engine.</li>
-        <li>Reported a 4% increase in combustion engine efficiency and reduced fuel consumption.</li>
-      </ul>
-      <div class="tags"><span>Thermoelectrics</span><span>Energy efficiency</span></div>
-    </div>
-    <div class="card">
-      <h3>Green Synthesis of Copper Nanoparticles</h3>
-      <div class="meta">MIT-World Peace University | Feb 2022 – May 2023</div>
-      <ul class="points">
-        <li>Developed a green synthesis method for copper nanoparticles that reduces waste compared with traditional methods.</li>
-        <li>Presented at the Second International Conference on Water Technologies to over 500 professionals.</li>
-      </ul>
-      <div class="tags"><span>Materials</span><span>Water remediation</span></div>
-    </div>
+
   </div>
 </section>
 
 <section id="leadership">
-  <h2>Leadership and Co-Curricular</h2>
-  <h3>Ground Station Head, Club Cosmos</h3>
-  <div class="meta">MIT-World Peace University | May 2022 – June 2024</div>
-  <ul class="points">
-    <li>Led design and deployment of a satellite ground station; built performance analysis models in MATLAB and Python.</li>
-  </ul>
-
-  <h3>Team Lead, Chem-E-Car Project</h3>
-  <div class="meta">AIChE Student Chapter, MIT-World Peace University</div>
-  <ul class="points">
-    <li>Led a 16-member multidisciplinary team to 1st place at the VIT Chem-E-Car Performance Competition (2022).</li>
-    <li>Delivered a 20% energy consumption reduction.</li>
-  </ul>
-
-  <h3>European Immersion Programme</h3>
-  <div class="meta">IMT France | March 2023</div>
-  <ul class="points">
-    <li>Took part in the programme across France, Belgium and the Netherlands.</li>
-  </ul>
+  <h2>Leadership and co-curricular</h2>
+  <div class="split">
+    <div class="box">
+      <h3>Ground Station Head, Club Cosmos</h3>
+      <div class="meta">MIT-World Peace University &middot; May 2022 – June 2024</div>
+      <p>Led the design and deployment of a satellite ground station, and built the performance analysis models in MATLAB and Python. Led team coordination and technical documentation.</p>
+    </div>
+    <div class="box">
+      <h3>Founder, Chem-E-Car Research Wing</h3>
+      <div class="meta">MIT-World Peace University &middot; Dec 2023 – June 2024</div>
+      <p>Set up a mentorship programme in fuel cell technology, and mentored a third-year team competing at SRC'24 Southeast Asia.</p>
+      <p><strong>Result:</strong> 40% increase in members' understanding, proficiency and participation. The mentored team placed second overall and qualified for the annual competition in San Diego.</p>
+    </div>
+    <div class="box">
+      <h3>Organising Team Member, Syntropy</h3>
+      <div class="meta">MIT-World Peace University &middot; Mar – Apr 2023</div>
+    </div>
+    <div class="box">
+      <h3>Event Coordinator, Paper Presentation</h3>
+      <div class="meta">MIT-World Peace University &middot; Apr – May 2022</div>
+    </div>
+    <div class="box">
+      <h3>European Immersion Programme</h3>
+      <div class="meta">IMT France &middot; March 2023</div>
+      <p>Took part in the programme across France, Belgium and the Netherlands.</p>
+    </div>
+    <div class="box">
+      <h3>Visit Volunteer, Industrial Visit</h3>
+      <div class="meta">Vadodara, Gujarat &middot; March 2024</div>
+      <p>Visited AMUL and Amofil Chemicals, applying chemical process design knowledge to analyse production processes and quality control measures.</p>
+    </div>
+  </div>
 </section>
 
 <section id="awards">
-  <h2>Awards</h2>
-  <ul class="points">
-    <li><strong>Second place, Hack-MITWPU Hackathon</strong> (February 2023), MIT-World Peace University, for the waste heat recovery project above.</li>
+  <h2>Awards and certificates</h2>
+  <ul>
+    <li><strong>Second place,</strong> Hack-MITWPU Hackathon (February 2023), MIT-World Peace University.</li>
+    <li><strong>Runner-up,</strong> Chem-E-Jeopardy, AIChE Student Regional Conference, VIT Vellore (September 2022).</li>
+    <li>NPTEL: Waste to Energy Conversion.</li>
+    <li>Udemy: HTML5 and CSS3 Fundamentals; MATLAB/Simulink for Power Electronics Simulations; Python; Astronomy.</li>
   </ul>
 </section>
 
 <section id="publications">
   <h2>Publications</h2>
-  <p>Datar, S., Kadu, S., Khurpade, P., Nandi, S. (2024). <em>Experimental Study on Green Synthesis of Copper Nanoparticles and Its Utilization for Degradation of Organic Dye.</em> In: Saxena, S., Shukla, S., Mural, P.K.S. (eds) Emerging Materials and Technologies in Water Remediation and Sensing. ICWT 2022. Lecture Notes in Civil Engineering, vol 439. Springer, Singapore. <a href="https://doi.org/10.1007/978-981-99-6762-9_7">https://doi.org/10.1007/978-981-99-6762-9_7</a></p>
+  <div class="pub">
+    <p>Datar, S., Kadu, S., Khurpade, P., Nandi, S. (2024). <em>Experimental Study on Green Synthesis of Copper Nanoparticles and Its Utilization for Degradation of Organic Dye.</em> In: Saxena, S., Shukla, S., Mural, P.K.S. (eds) Emerging Materials and Technologies in Water Remediation and Sensing. ICWT 2022. Lecture Notes in Civil Engineering, vol 439. Springer, Singapore. <a href="https://doi.org/10.1007/978-981-99-6762-9_7">doi:10.1007/978-981-99-6762-9_7</a></p>
+  </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="tags">
-    <span>ANSYS Fluent</span><span>COMSOL Multiphysics</span><span>MATLAB / Simulink</span><span>Python (NumPy, SciPy, Pandas)</span><span>Excel</span><span>SLURM / HPC</span><span>Techno-economic analysis</span><span>Feasibility studies</span><span>Hydrogen storage</span><span>Thermal energy systems</span><span>Technical reporting</span>
+  <div class="split">
+    <div>
+      <h3>Simulation and modelling</h3>
+      <div class="chip-row" style="margin-top:10px">
+        <span>ANSYS Fluent</span><span>COMSOL Multiphysics</span><span>Materials Studio</span><span>DWSIM</span><span>MATLAB and Simulink</span><span>SLURM on HPC</span>
+      </div>
+      <h3 style="margin-top:20px">Programming and tools</h3>
+      <div class="chip-row" style="margin-top:10px">
+        <span>Python (NumPy, SciPy, Pandas)</span><span>MATLAB</span><span>AutoCAD</span><span>Arduino IDE</span><span>HTML5 and CSS3</span><span>Microsoft Office</span><span>Excel</span>
+      </div>
+    </div>
+    <div>
+      <h3>Analysis</h3>
+      <p style="margin-top:10px">Techno-economic analysis, feasibility studies, scenario and sensitivity analysis, uncertainty quantification, energy balance, hydrogen storage, thermal energy systems.</p>
+      <h3 style="margin-top:20px">Soft skills</h3>
+      <p style="margin-top:10px">Technical communication, translating for non-specialists, critical thinking and scepticism, attention to detail, stakeholder management, problem-solving under constraints, curiosity and continuous learning.</p>
+      <h3 style="margin-top:20px">Languages</h3>
+      <p style="margin-top:10px">English (advanced, IELTS 7), Hindi (native), German (A2, ongoing).</p>
+    </div>
   </div>
-  <p style="margin-top:18px"><strong>Soft skills:</strong> technical communication, translating for non-specialists, critical thinking, attention to detail, stakeholder management, problem-solving under constraints, curiosity and continuous learning.</p>
-  <p><strong>Languages:</strong> English (fluent), German (basic).</p>
 </section>
 
 <section id="education">
   <h2>Education</h2>
-  <h3>MSc Global Energy Technologies and Systems</h3>
-  <div class="meta">University of Birmingham | Sept 2025 – Sept 2026 | Result pending (expected merit)</div>
-  <h3>B.Tech Chemical Engineering</h3>
-  <div class="meta">MIT-World Peace University, Pune | 2021 – 2024 | CGPA 9.26/10</div>
-  <h3>Diploma in Chemical Engineering</h3>
-  <div class="meta">Nagpur Polytechnic | 2018 – 2021 | 91.22%</div>
+  <div class="split">
+    <div class="box">
+      <h3>MSc Global Energy Technologies and Systems</h3>
+      <div class="meta">University of Birmingham &middot; Sept 2025 – Sept 2026 &middot; Result pending, expected merit</div>
+    </div>
+    <div class="box">
+      <h3>B.Tech Chemical Engineering</h3>
+      <div class="meta">MIT-World Peace University, Pune &middot; 2021 – 2024 &middot; CGPA 9.26/10</div>
+    </div>
+    <div class="box">
+      <h3>Diploma in Chemical Engineering</h3>
+      <div class="meta">Nagpur Polytechnic, Nagpur &middot; 2018 – 2021 &middot; 91.22%</div>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="wrap">Shreyas Kadu | <a href="mailto:shreyas.kadu.pj@gmail.com">shreyas.kadu.pj@gmail.com</a></div>
+  <div class="wrap">
+    Shreyas Kadu &middot; <a href="mailto:shreyas.kadu.pj@gmail.com">shreyas.kadu.pj@gmail.com</a> &middot; <a href="https://www.linkedin.com/in/shreyas-kadu-67aa491a8/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
 </footer>
 
 </body>
