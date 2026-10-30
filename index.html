@@ -217,57 +217,22 @@
       <div class="result"><strong>Result:</strong> a multiphase model showing how fill level drives pressurisation and boil-off.</div>
       <div class="chips"><span>ANSYS Fluent</span><span>HPC / SLURM</span><span>Python</span><span>MATLAB</span></div>
     </article>
-
-    <article class="case">
-      <span class="loc">MIT-World Peace University, Pune, India &middot; Feb – May 2024</span>
-      <h3>Shell-and-tube heat exchanger CFD study</h3>
-      <div class="label">Approach</div>
-      <p>Final-year project: CFD analysis of shell-and-tube heat exchangers with and without baffles, comparing design variants on performance, cost and manufacturability.</p>
-      <div class="result"><strong>Result:</strong> 15% thermal efficiency gain.</div>
-      <div class="chips"><span>CFD</span><span>Heat transfer</span></div>
-    </article>
-
-    <article class="case">
-      <span class="loc">Hack-MITWPU Hackathon, Pune, India &middot; Jan – Feb 2023</span>
-      <h3>Waste heat recovery with thermoelectric generators</h3>
-      <div class="label">Approach</div>
-      <p>Team head. Designed, validated and optimised a waste heat recovery system using TEGs on a combustion engine.</p>
-      <div class="result"><strong>Result:</strong> 4% increase in combustion engine efficiency, with reduced fuel consumption. Second place.</div>
-      <div class="chips"><span>Thermoelectrics</span><span>Energy efficiency</span></div>
-    </article>
-
-    <article class="case">
-      <span class="loc">MIT-World Peace University, Pune, India &middot; Feb 2022 – May 2023</span>
-      <h3>Green synthesis of copper nanoparticles</h3>
-      <div class="label">Approach</div>
-      <p>A green synthesis method for copper nanoparticles that produces less waste than traditional methods, used to degrade organic dye. Supervised by Dr. Pratiksha Khurpade.</p>
-      <div class="result"><strong>Result:</strong> presented to over 500 industry professionals and researchers at ICWT, and published in Springer.</div>
-      <div class="chips"><span>Materials</span><span>Water remediation</span></div>
-    </article>
-
-    <article class="case">
-      <span class="loc">AIChE Student Chapter, MIT-WPU &middot; Mar 2022 – Apr 2023</span>
-      <h3>Team Lead, Chem-E-Car</h3>
-      <div class="label">Approach</div>
-      <p>Led a 16-person multidisciplinary team through the design and build of a chemical car. I designed and built zinc–MnO₂ dry-cell batteries, measuring voltage and current with a multimeter. I chose series and parallel arrangements to reach the desired voltage and current, and tracked how the cells' output changed over time.</p>
-      <div class="result"><strong>Result:</strong> first place at the VIT Chem-E-Car Performance Competition (2022), and a 20% reduction in energy consumption.</div>
-    </article>
-
-
     <article class="case full">
-      <span class="loc">Self-directed project &middot; 2026</span>
-      <h3>ARIA: Energy Consulting Suite</h3>
+      <span class="loc">Self-directed project &middot; 2026 &middot; Open source (MIT)</span>
+      <h3>processkit: chemical engineering calculators</h3>
       <div class="label">Design basis</div>
-      <p>A web tool that gives small and medium-sized businesses a structured view of their energy use, carbon footprint and on-site generation options.</p>
+      <p>A set of free browser calculators for early-stage chemical process design, covering the calculations taught in a chemical engineering degree and used in preliminary design.</p>
       <div class="label">Approach</div>
       <ul>
-        <li>Built a Python Flask application with separate assessment pages for SME energy, net zero roadmaps, solar PV and battery storage, and carbon footprint.</li>
-        <li>Calculated carbon emissions from gas and electricity use with DESNZ 2025 conversion factors, and sized solar PV from roof area with indicative installed cost ranges.</li>
-        <li>Added an AI-assisted report layer, using the Anthropic API, that turns the inputs into written assessments across six report types.</li>
+        <li>Heat exchanger area from duty, overall heat transfer coefficient and stream temperatures using the LMTD method, with a correction factor for shell-and-tube flow.</li>
+        <li>Pipe pressure drop and pump power using Colebrook friction, fitting losses and elevation, with the flow regime reported.</li>
+        <li>Two-component flash using Raoult's law with NIST Antoine constants, and three-component shortcut distillation using the Fenske, Underwood and Gilliland methods.</li>
+        <li>Capital cost scaling with the six-tenths rule and CEPCI escalation, and levelised cost of energy or hydrogen. Each method cites its source.</li>
       </ul>
-      <div class="chips"><span>Python</span><span>Flask</span><span>Anthropic API</span><span>HTML, CSS and JavaScript</span><span>DESNZ 2025 factors</span></div>
+      <div class="result"><strong>Result:</strong> a working set of six calculators, each with stated units and documented sources, released as open-source code. The tool is for screening and learning, not a substitute for a commercial simulator.</div>
+      <div class="chips"><span>JavaScript</span><span>Chemical process design</span><span>Heat exchangers</span><span>Distillation</span><span>Techno-economics</span></div>
+      <p style="margin-top:12px"><a href="https://shreyaskadu-june.github.io/processkit/">Open processkit</a> &middot; <a href="https://github.com/shreyaskadu-june/processkit">Source code</a></p>
     </article>
-
     <article class="case full">
       <span class="loc">Self-directed project &middot; 2026</span>
       <h3>UK hydrogen pipeline techno-economic workbench</h3>
@@ -282,6 +247,50 @@
       <div class="result"><strong>Result:</strong> the default 460 km Teesside to London case needs no compressor and gives a levelised transport cost of about £0.72/kg. A 1.25 route factor raises that to about £0.90/kg. These are screening estimates, not a design basis.</div>
       <div class="chips"><span>JavaScript</span><span>Chart.js</span><span>Leaflet</span><span>Real-gas properties (NIST)</span><span>Techno-economic analysis</span></div>
       <p style="margin-top:12px"><a href="https://shreyaskadu-june.github.io/h2-pipeline-workbench/">Open the workbench</a></p>
+    </article>
+    <article class="case full">
+      <span class="loc">Self-directed project &middot; 2026</span>
+      <h3>ARIA: Energy Consulting Suite</h3>
+      <div class="label">Design basis</div>
+      <p>A web tool that gives small and medium-sized businesses a structured view of their energy use, carbon footprint and on-site generation options.</p>
+      <div class="label">Approach</div>
+      <ul>
+        <li>Built a Python Flask application with separate assessment pages for SME energy, net zero roadmaps, solar PV and battery storage, and carbon footprint.</li>
+        <li>Calculated carbon emissions from gas and electricity use with DESNZ 2025 conversion factors, and sized solar PV from roof area with indicative installed cost ranges.</li>
+        <li>Added an AI-assisted report layer, using the Anthropic API, that turns the inputs into written assessments across six report types.</li>
+      </ul>
+      <div class="chips"><span>Python</span><span>Flask</span><span>Anthropic API</span><span>HTML, CSS and JavaScript</span><span>DESNZ 2025 factors</span></div>
+    </article>
+    <article class="case">
+      <span class="loc">MIT-World Peace University, Pune, India &middot; Feb – May 2024</span>
+      <h3>Shell-and-tube heat exchanger CFD study</h3>
+      <div class="label">Approach</div>
+      <p>Final-year project: CFD analysis of shell-and-tube heat exchangers with and without baffles, comparing design variants on performance, cost and manufacturability.</p>
+      <div class="result"><strong>Result:</strong> 15% thermal efficiency gain.</div>
+      <div class="chips"><span>CFD</span><span>Heat transfer</span></div>
+    </article>
+    <article class="case">
+      <span class="loc">MIT-World Peace University, Pune, India &middot; Feb 2022 – May 2023</span>
+      <h3>Green synthesis of copper nanoparticles</h3>
+      <div class="label">Approach</div>
+      <p>A green synthesis method for copper nanoparticles that produces less waste than traditional methods, used to degrade organic dye. Supervised by Dr. Pratiksha Khurpade.</p>
+      <div class="result"><strong>Result:</strong> presented to over 500 industry professionals and researchers at ICWT, and published in Springer.</div>
+      <div class="chips"><span>Materials</span><span>Water remediation</span></div>
+    </article>
+    <article class="case">
+      <span class="loc">AIChE Student Chapter, MIT-WPU &middot; Mar 2022 – Apr 2023</span>
+      <h3>Team Lead, Chem-E-Car</h3>
+      <div class="label">Approach</div>
+      <p>Led a 16-person multidisciplinary team through the design and build of a chemical car. I designed and built zinc–MnO₂ dry-cell batteries, measuring voltage and current with a multimeter. I chose series and parallel arrangements to reach the desired voltage and current, and tracked how the cells' output changed over time.</p>
+      <div class="result"><strong>Result:</strong> first place at the VIT Chem-E-Car Performance Competition (2022), and a 20% reduction in energy consumption.</div>
+    </article>
+    <article class="case">
+      <span class="loc">Hack-MITWPU Hackathon, Pune, India &middot; Jan – Feb 2023</span>
+      <h3>Waste heat recovery with thermoelectric generators</h3>
+      <div class="label">Approach</div>
+      <p>Team head. Designed, validated and optimised a waste heat recovery system using TEGs on a combustion engine.</p>
+      <div class="result"><strong>Result:</strong> 4% increase in combustion engine efficiency, with reduced fuel consumption. Second place.</div>
+      <div class="chips"><span>Thermoelectrics</span><span>Energy efficiency</span></div>
     </article>
   </div>
 </section>
